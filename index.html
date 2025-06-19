@@ -1,0 +1,405 @@
+<html><head><title>coinSwitch</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=keyboard_arrow_down" />
+    <style>
+         .invert-colors {
+            filter: invert(1) hue-rotate(180deg); 
+        }
+        body {
+    margin: 0; 
+    padding: 0; 
+    background-color: white;
+}
+
+        .top{
+            margin: 0;
+            background-color: white;
+            width :100%;
+            height:60px;
+            align-items: center;
+            padding: 10px;
+        }
+
+        .header{
+            height: 75%; padding-top: 10px; padding-left: 70px;
+            padding-right: 70px;
+            padding-bottom: 10px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            background-color: white;
+
+        }
+        .maino{
+            border-top-left-radius: 25px;
+            border-top-right-radius: 25px;
+            background-color: rgb(217, 221, 232);
+            box-sizing: border-box;
+            overflow: hidden;
+            margin-left: 0; 
+            margin-right: 0;
+        }
+        .overlap {
+    position:absolute;
+    top: 25%;
+    left: 41%; 
+    transform: translate(-50%, 0); 
+    color: black; 
+    border-radius: 5px;
+    font-family: 'Montserrat', sans-serif;
+    max-width: 85%; 
+    text-align: left; 
+    z-index: 5; 
+}
+
+        .main{
+            height: auto;
+            width: 100%;
+            margin-top: 0.5px;
+            margin-bottom: 0.5px;
+            display: flex;
+            justify-items: center;
+            background-color: rgb(217, 221, 232);
+            box-sizing: border-box;
+            overflow: hidden;
+            
+        }
+.a{
+    background-color: rgb(231, 237, 253);
+}
+.b{
+    background-color: azure;
+}
+.c{
+    background-color: white;
+}
+        .a,.b,.c{
+            height: 75px;
+            width: 75px;
+            margin: 0.5px;
+            z-index: 4;
+            transition: background-color 0s ease, background-color 0.3s ease 0.6s; 
+        }
+        
+        .a:hover,.b:hover,.c:hover {
+            background-color: rgb(217, 221, 232);
+            transition-delay: 0s; 
+        }
+       
+        .a:not(:hover),.b:not(:hover) ,.c:not(:hover){
+            transition-delay: 0.6s; 
+        }
+        .a:last-child, .b:last-child, .c:last-child {
+            flex-grow: 1; 
+        }
+        img{
+            height: 90%;
+
+        }
+        .overlap p{
+            font-size: 75px;
+            font-weight: 700;
+            font-family: 'Montserrat', sans-serif;
+
+        }
+        .header p {
+            margin: 0;
+            font-size: 15px;
+            font-weight: 500;
+            font-family: 'Montserrat', sans-serif;
+            color: rgb(0, 0, 0); 
+        }
+    </style>
+</head>
+<body>
+    <button onclick="toggleDarkMode()" style="position: fixed; top: 10px; right: 10px; padding: 10px;border-radius: 10PX; background-color: grey; color: white; border: none; cursor: pointer;">
+        >THEME<
+    </button>
+    <div class="top"><div class="header">
+        <div style="height: 100%; width: 45%;">
+            <a href="https://coinswitch.co/" style="text-decoration: none;"><button style="background: transparent; border: none; color: black; cursor: pointer; font-size: inherit;display: flex;flex-direction: row;">  
+        <img src="https://coinswitch.co/_next/static/media/logo.01525825.svg" alt="cs">
+        </button>
+            </a>
+        </div>
+        <div style="height: 100%; display: flex;flex-direction: row;align-items: center;"><button style="background: transparent; border: none; color: black; cursor: pointer; font-size: inherit;display: flex;flex-direction: row;"><p>Products</p></button><span class="material-symbols-outlined">
+            keyboard_arrow_down
+            </span></div>
+        <div style="height: 100%; display: flex;flex-direction: row;align-items: center;"><a href="https://coinswitch.co/coins" style="text-decoration: none;"><button style="background: transparent; border: none; color: black; cursor: pointer; font-size: inherit;display: flex;flex-direction: row;"><p>Coins</p></button></a></div>
+        <div style="height: 100%; display: flex;flex-direction: row;align-items: center;"><button style="background: transparent; border: none; color: black; cursor: pointer; font-size: inherit;display: flex;flex-direction: row;"><p>Ventures</p></button></div>
+        <div style="height: 100%; display: flex;flex-direction: row;align-items: center;"><a href="https://coinswitch.co/switch/" style="text-decoration: none;"><button style="background: transparent; border: none; color: black; cursor: pointer; font-size: inherit;display: flex;flex-direction: row;"><p>Blog</p></button></a></div>
+        <div style="height: 100%; display: flex;flex-direction: row;align-items: center;"><button style="background: transparent; border: none; color: black; cursor: pointer; font-size: inherit;display: flex;flex-direction: row;"><p>Company</p></button><span class="material-symbols-outlined" style="vertical-align: middle;">
+            keyboard_arrow_down
+            </span></div>
+        <div style="height: 100%; display: flex; align-items: center; justify-content: center; padding: 0 20px;border-radius:7px; background-color: rgb(175, 230, 15);">
+            <a href="https://coinswitch.co/pro/btc-inr/csx?utm_source=header_home" target="_blank">
+            <button style="background: transparent; border: none; color: black; cursor: pointer; font-size: inherit;">Login To Pro</button>
+            </a></div>
+    </div></div>
+    <div class="maino">
+        <div class="overlap"><img src="https://s3.ap-southeast-1.amazonaws.com/files.coinswitch.co/images/ventures_logo.svg">
+        <p style="margin: 20px;"></p><br><br><p style="margin: 0;color: black;">Your Innovation</p><br>
+    <p style="margin:0 ;color: #6992fc;">Our Fuel</p><br><br><p style="font-size: 27.5px; color: rgb(73, 76, 90);">CoinSwitch Ventures invests in the most promising Web3 and blockchain projects in India. Does that sound like you?</p>
+</div>
+    <div class="main">
+        <div class="a"></div>
+    <div class="a"></div>
+    <div class="a"></div>
+    <div class="a"></div>
+    <div class="a"></div>
+    <div class="a"></div>
+    <div class="a"></div>
+    <div class="a"></div>
+    <div class="a"></div>
+    <div class="a"></div>
+    <div class="a"></div>
+    <div class="a"></div>
+    <div class="a"></div>
+    <div class="a"></div>
+    <div class="a"></div>
+    <div class="a"></div>
+    <div class="a"></div>
+    <div class="a"></div>
+    <div class="a"></div>
+    <div class="a"></div>
+    <div class="a" style="width: min-content;"></div>
+
+    
+
+    </div>
+    <div class="main">
+        <div class="a"></div>
+    <div class="a"></div>
+    <div class="a"></div>
+    <div class="a"></div>
+    <div class="a"></div>
+    <div class="a"></div>
+    <div class="a"></div>
+    <div class="a"></div>
+    <div class="a"></div>
+    <div class="a"></div>
+    <div class="a"></div>
+    <div class="a"></div>
+    <div class="a"></div>
+    <div class="a"></div>
+    <div class="a"></div>
+    <div class="a"></div>
+    <div class="a"></div>
+    <div class="a"></div>
+    <div class="a"></div>
+    <div class="a"></div>
+    <div class="a" style="width: min-content;"></div>
+
+
+    </div>
+    <div class="main">
+        <div class="a"></div>
+    <div class="a"></div>
+    <div class="a"></div>
+    <div class="a"></div>
+    <div class="a"></div>
+    <div class="a"></div>
+    <div class="a"></div>
+    <div class="a"></div>
+    <div class="a"></div>
+    <div class="a"></div>
+    <div class="a"></div>
+    <div class="a"></div>
+    <div class="a"></div>
+    <div class="a"></div>
+    <div class="a"></div>
+    <div class="a"></div>
+    <div class="a"></div>
+    <div class="a"></div>
+    <div class="a"></div>
+    <div class="a"></div>
+    <div class="a" style="width: min-content;"></div>
+
+
+    </div>
+    <div class="main">
+        <div class="a"></div>
+    <div class="a"></div>
+    <div class="a"></div>
+    <div class="a"></div>
+    <div class="a"></div>
+    <div class="a"></div>
+    <div class="a"></div>
+    <div class="a"></div>
+    <div class="a"></div>
+    <div class="a"></div>
+    <div class="a"></div>
+    <div class="a"></div>
+    <div class="a"></div>
+    <div class="a"></div>
+    <div class="a"></div>
+    <div class="a"></div>
+    <div class="a"></div>
+    <div class="a"></div>
+    <div class="a"></div>
+    <div class="a"></div>
+    <div class="a" style="width: min-content;"></div>
+
+
+    </div>
+
+    <div class="main">
+        <div class="b"></div>
+        <div class="b"></div>
+        <div class="b"></div>
+        <div class="b"></div>
+        <div class="b"></div>
+        <div class="b"></div>
+        <div class="b"></div>
+        <div class="b"></div>
+        <div class="b"></div>
+        <div class="b"></div>
+        <div class="b"></div>
+        <div class="b"></div>
+        <div class="b"></div>
+        <div class="b"></div>
+        <div class="b"></div>
+        <div class="b"></div>
+        <div class="b"></div>
+        <div class="b"></div>
+        <div class="b"></div>
+        <div class="b"></div>
+        <div class="b" style="width: min-content;"></div>
+    </div>
+
+    
+    <div class="main">
+        <div class="b"></div>
+        <div class="b"></div>
+        <div class="b"></div>
+        <div class="b"></div>
+        <div class="b"></div>
+        <div class="b"></div>
+        <div class="b"></div>
+        <div class="b"></div>
+        <div class="b"></div>
+        <div class="b"></div>
+        <div class="b"></div>
+        <div class="b"></div>
+        <div class="b"></div>
+        <div class="b"></div>
+        <div class="b"></div>
+        <div class="b"></div>
+        <div class="b"></div>
+        <div class="b"></div>
+        <div class="b"></div>
+        <div class="b"></div>
+        <div class="b" style="width: min-content;"></div>
+    </div>
+
+    
+    <div class="main">
+        <div class="b"></div>
+        <div class="b"></div>
+        <div class="b"></div>
+        <div class="b"></div>
+        <div class="b"></div>
+        <div class="b"></div>
+        <div class="b"></div>
+        <div class="b"></div>
+        <div class="b"></div>
+        <div class="b"></div>
+        <div class="b"></div>
+        <div class="b"></div>
+        <div class="b"></div>
+        <div class="b"></div>
+        <div class="b"></div>
+        <div class="b"></div>
+        <div class="b"></div>
+        <div class="b"></div>
+        <div class="b"></div>
+        <div class="b"></div>
+        <div class="b" style="width: min-content;"></div>
+    </div>
+
+    <div class="main">
+        <div class="c"></div>
+        <div class="c"></div>
+        <div class="c"></div>
+        <div class="c"></div>
+        <div class="c"></div>
+        <div class="c"></div>
+        <div class="c"></div>
+        <div class="c"></div>
+        <div class="c"></div>
+        <div class="c"></div>
+        <div class="c"></div>
+        <div class="c"></div>
+        <div class="c"></div>
+        <div class="c"></div>
+        <div class="c"></div>
+        <div class="c"></div>
+        <div class="c"></div>
+        <div class="c"></div>
+        <div class="c"></div>
+        <div class="c"></div>
+        <div class="c" style="width: min-content;"></div>
+    </div>
+    
+    <div class="main">
+        <div class="c"></div>
+        <div class="c"></div>
+        <div class="c"></div>
+        <div class="c"></div>
+        <div class="c"></div>
+        <div class="c"></div>
+        <div class="c"></div>
+        <div class="c"></div>
+        <div class="c"></div>
+        <div class="c"></div>
+        <div class="c"></div>
+        <div class="c"></div>
+        <div class="c"></div>
+        <div class="c"></div>
+        <div class="c"></div>
+        <div class="c"></div>
+        <div class="c"></div>
+        <div class="c"></div>
+        <div class="c"></div>
+        <div class="c"></div>
+        <div class="c" style="width: min-content;"></div>
+    </div>
+    
+    <div class="main">
+        <div class="c"></div>
+        <div class="c"></div>
+        <div class="c"></div>
+        <div class="c"></div>
+        <div class="c"></div>
+        <div class="c"></div>
+        <div class="c"></div>
+        <div class="c"></div>
+        <div class="c"></div>
+        <div class="c"></div>
+        <div class="c"></div>
+        <div class="c"></div>
+        <div class="c"></div>
+        <div class="c"></div>
+        <div class="c"></div>
+        <div class="c"></div>
+        <div class="c"></div>
+        <div class="c"></div>
+        <div class="c"></div>
+        <div class="c"></div>
+        <div class="c" style="width: min-content;"></div>
+    </div>
+        
+
+
+    </div>
+</div>
+
+<script>
+    function toggleDarkMode() {
+        document.body.classList.toggle('invert-colors');
+    }
+</script>
+</body>
+</html>
